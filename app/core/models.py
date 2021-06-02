@@ -25,8 +25,8 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     """Custom user madel that suppors using email instead of username"""
-    email = models.EmailField(mas_length=255, unique=True)
-    name = models.CharField(mas_lenth=255)
+    email = models.EmailField(max_length=255, unique=True)
+    name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
